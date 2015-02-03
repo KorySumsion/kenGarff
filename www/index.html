@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="kenGarff">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+    <script src="lib/angular-cookie/angular-cookie.min.js"></script>
+     <script src="lib/angular-cookies/angular-cookies.min.js"></script>
+    <script src="lib/ng-token-auth/dist/ng-token-auth.min.js"></script>
+    <script src="lib/ng-cordova.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+
+    <script src="js/app.js"></script>
+    <script src="js/mainCtrl.js"></script>
+    <script src="js/mainService.js"></script>
+    <script src="js/starDirective.js"></script>
+    <script src="js/navBarDirective.js"></script>
+    <script src="js/imageDirective.js"></script>
+  </head>
+  <body ng-controller="mainCtrl" ng-init="kenGarffRequest()">
+
+    <ion-pane>
+      <nav-bar></nav-bar>
+      <ion-content>
+
+
+        <!-- TODO: Make Percentage -->
+        <div style="padding-top: 260px;">
+<!-- <image-directive online-review='apartmentratings.com'></image-directive>  -->
+        <div ng-repeat="review in reviews">
+
+          <span class="item">
+
+            <h2>{{review.author}}</h2> 
+            <review-stars rating-value="review.rating" max="5"></review-stars>
+            <p>{{review.review}}</p>
+          </span>
+        </div>
+        </div>
+        </ion-content>
+      </ion-content>
+    </ion-pane>
+  </body>
+</html>

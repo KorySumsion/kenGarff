@@ -1,0 +1,37 @@
+      <ion-header-bar class="bar-calm">
+        <h1 class="title">REPDRIVE</h1>
+      </ion-header-bar>
+      <div class="bar bar-subheader">
+        <div class="list card">
+          <a class="item item-thumbnail-left">
+            <img src="http://www.dbm-media.com/wp-content/uploads/2012/11/KenGarff31.png">
+              {{stats.name}}
+            <p>
+              {{stats.address}}
+              {{stats.city}}
+              {{stats.state}}<br>
+              {{stats.phone}}
+            </p>
+          </a>
+        </div>
+
+        <div class="list">
+          <div class="row">
+            <div class="col col-33">
+              <div class="item">
+                Overall<br> review:<br> {{averageRating}}
+              </div>
+            </div>
+            <div class="col col-33">
+              <div class="item">
+                Total<br> reviews:<br> {{stats.totalReviews}}
+              </div>
+            </div>
+            <div class="col col-33">
+              <div class="item">
+                Reviews<br> this week:<br> {{lastWeek}}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
